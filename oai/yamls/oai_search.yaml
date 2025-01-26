@@ -1,0 +1,16 @@
+oai.tools.oai_search.oai_search:
+  function: oai_search
+  inputs:
+    is_env_setup_successful:
+      type:
+      - boolean
+    user_prompt:
+      type:
+      - string
+    max_tokens:
+      type:
+      - integer
+  module: oai.tools.oai_search
+  name: Open AI custom Search Tool
+  description: This is hello world tool
+  type: python
