@@ -1,0 +1,82 @@
+{
+  "package": {
+    "oai.tools.oai_search.oai_search": {
+      "function": "oai_search",
+      "inputs": {
+        "is_env_setup_successful": {
+          "type": [
+            "boolean"
+          ]
+        },
+        "user_prompt": {
+          "type": [
+            "string"
+          ]
+        },
+        "max_tokens": {
+          "type": [
+            "integer"
+          ]
+        }
+      },
+      "module": "oai.tools.oai_search",
+      "name": "Open AI custom Search Tool",
+      "description": "This is hello world tool",
+      "type": "python",
+      "package": "oai",
+      "package_version": "0.0.1"
+    }
+  },
+  "code": {
+    "oai_search.py": {
+      "type": "python",
+      "inputs": {
+        "is_env_setup_successful": {
+          "type": [
+            "bool"
+          ]
+        },
+        "user_prompt": {
+          "type": [
+            "string"
+          ]
+        },
+        "max_tokens": {
+          "type": [
+            "int"
+          ]
+        }
+      },
+      "source": "oai_search.py",
+      "function": "my_python_tool"
+    },
+    "oai_setupenv.py": {
+      "type": "python",
+      "inputs": {
+        "api_key": {
+          "type": [
+            "string"
+          ]
+        },
+        "endpoint": {
+          "type": [
+            "string"
+          ]
+        },
+        "deployment_name": {
+          "type": [
+            "string"
+          ]
+        },
+        "setupenv": {
+          "type": [
+            "bool"
+          ]
+        }
+      },
+      "description": "This tool sets up the environment variables for the OAI tools",
+      "source": "oai_setupenv.py",
+      "function": "my_python_tool"
+    }
+  }
+}
