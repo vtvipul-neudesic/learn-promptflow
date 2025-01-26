@@ -5,7 +5,7 @@ import os
 
 
 @tool
-def my_python_tool(is_env_setup_successful: bool, user_prompt: str, max_tokens: int) -> dict:
+def oai_search_tool(is_env_setup_successful: bool, user_prompt: str, max_tokens: int) -> dict:
     if not is_env_setup_successful:
         return False
     headers = {"Content-Type": "application/json", "api-key": os.getenv("API_KEY")}
