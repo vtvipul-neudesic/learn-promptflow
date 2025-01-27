@@ -1,1 +1,2 @@
 promptflow
+git+https://github.com/vtvipul-neudesic/learn-promptflow.git@oai_tools

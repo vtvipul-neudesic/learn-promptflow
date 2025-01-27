@@ -8,7 +8,7 @@ inputs:
 outputs:
   final_response:
     type: string
-    reference: ${oai_search.output}
+    reference: ${oai_custom_search.output}
 nodes:
 - name: oai_setupenv
   type: python
@@ -20,18 +20,12 @@ nodes:
     api_key: 4JXxtH2cbjQkFbDq8WxKm8boOhYxtD6Kk5dWKkFqFaVH8h5N7WpaJQQJ99BAAC5T7U2XJ3w3AAAAACOGrQja
     endpoint: https://vipul-m69bq14z-francecentral.openai.azure.com/
     deployment_name: gpt-35-turbo
-- name: oai_search
-  type: python
-  source:
-    type: code
-    path: oai_search.py
-  inputs:
-    user_prompt: ${inputs.query_text}
-    max_tokens: 100
-    is_env_setup_successful: ${inputs.setupenv}
-- name: oai_custom_tool
+- name: oai_custom_search
   type: python
   source:
     type: package
-    tool: oai.tools.oai_search.oai_search
-  inputs: {}
+    tool: oai.tools.oai_search.oai_search_tool
+  inputs:
+    is_env_setup_successful: ${oai_setupenv.output}
+    user_prompt: ${inputs.query_text}
+    max_tokens: 100

@@ -15,6 +15,13 @@
           "is_env_setup_successful": []
         }
       }
+    },
+    "oai_custom_search": {
+      "variant_0": {
+        "inputs": {
+          "is_env_setup_successful": []
+        }
+      }
     }
   }
 }
