@@ -8,7 +8,10 @@ setup(
     description="This is my tools package",
     packages=find_packages(),
     entry_points={
-        "package_tools": ["oai_search = oai.tools.utils:list_package_tools"],
+        "package_tools": [
+            "oai_search = oai.tools.utils:list_package_tools",
+            "oai_setupenv = oai.tools.oai_setupenv:oai_setupenv_tool",
+        ],
     },
-    include_package_data=True,   # This line tells setuptools to include files from MANIFEST.in
+    include_package_data=True,  # This line tells setuptools to include files from MANIFEST.in
 )
