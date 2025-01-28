@@ -1,2 +1,2 @@
 promptflow
-git+https://github.com/vtvipul-neudesic/learn-promptflow.git@oai_tools
+-e ../oai_tools # Editable install

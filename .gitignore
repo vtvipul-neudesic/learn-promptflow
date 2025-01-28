@@ -25,7 +25,8 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
-oai_tools
+oai_tools/dist/
+oai_tools/build/
 
 
 # PyInstaller
